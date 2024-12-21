@@ -1,0 +1,133 @@
+---
+title: YOUR TITLE
+author: YOUR NAME
+date: Month date, YEAR
+output: 
+  revealjs::revealjs_presentation:
+    pandoc_args: [ "--slide-level", "2" ]
+    self_contained: false
+    reveal_plugins: ["menu","notes"]
+    reveal_options:
+      slideNumber: true
+      menu:
+        numbers: true
+    transition: "fade"
+    theme: night
+    highlight: pygments
+    css: styles.css
+    center: true
+---
+
+# Two columns 1 {data-background="fig/IPB_logo.svg" data-background-size="120px" data-background-position="top 25px left 50px"}
+
+<style>
+.column-left{
+  float: left;
+  width: 48%;
+  text-align: left;
+}
+.column-right{
+  float: right;
+  width: 48%;
+  text-align: left;
+}
+</style>
+
+<div class="column-left">
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+ZooCorner
+</div>
+
+<div class="column-right">  
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+</div>
+
+# Two columns 2 {data-background="fig/IPB_logo.svg" data-background-size="120px" data-background-position="top 25px left 50px"}
+
+<style>
+.container{
+  display: flex;
+}
+.col{
+  flex: 1;
+}
+</style>
+
+<div class="container">
+<div class="col">
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+</div>
+<div class="col">
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+</div>
+</div>
+
+# Two columns 3
+
+<style>
+.twocolumn {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   text-align: left;
+}
+</style>
+
+<div class="twocolumn">
+  <div>
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+  </div>
+  <div>
+```{r, echo=FALSE, warning=FALSE, fig.height=5, fig.width=5}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-6.55717599, lng=106.72295884, popup="Zoo Corner")
+m
+```
+  </div>
+</div>
+
+
+# You have a menu..
+..click the three-horizontal-bar on the bottom-left..
+
+# You can have notes..
+..try click »S« key to open the *notes* window..  
+
+<div class="notes">
+..but notes plugin inhibit you to do self_contained: true
+
+- It can contain markdown
+- like this list
+</div>
